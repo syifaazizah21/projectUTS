@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-img-top"></div>
+        <div class="card-body text-center">
+            <h5 class="card-title">Catatan Mata Kuliah</h5>
+            <p class="card-text">Ini merupakan catatan mata kuliah dari beberapa mahasiswa semester lalu.</p>
+        </div>
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Kode MK</th>
+                        <th scope="col">Nama MK</th>
+                        <th scope="col">Link G-Drive</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for catatan in catatanMk %}
+                    <tr>
+                        <td>{{ catatan.kode_mk }}</td>
+                        <td>{{ catatan.nama_mk }}</td>
+                        <td>
+                            <a href="{{ catatan.catatan_mk }}">{{ catatan.catatan_mk }}</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

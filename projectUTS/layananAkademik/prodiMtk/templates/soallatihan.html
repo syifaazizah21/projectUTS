@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-img-top"></div>
+        <div class="card-body text-center">
+            <h5 class="card-title">Soal Latihan Semester Sebelumnya</h5>
+            <p class="card-text">Ini merupakan soal latihan dari mata kuliah yang di ampu oleh beberapa mahasiswa semester lalu.</p>
+        </div>
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Kode MK</th>
+                        <th scope="col">Nama MK</th>
+                        <th scope="col">Link G-Drive</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for soal in soalMk %}
+                    <tr>
+                        <td>{{ soal.kode_mk }}</td>
+                        <td>{{ soal.nama_mk }}</td>
+                        <td>
+                            <a href="{{ soal.soal_mk }}">{{ soal.soal_mk }}</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

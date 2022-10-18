@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="card">
+        <div class="card-img-top"></div>
+        <div class="card-body text-center">
+            <h5 class="card-title">Blog Pembahasan Soal Latihan</h5>
+            <p class="card-text">Di bagian ini terdapat pembahasan soal-soal latihan pada halaman sebelumnya!</p>
+        </div>
+    </div>
+    <div class="card-blog card">
+        {% for blog in blog %}
+        <div class="card-body">
+            <h5 class="card-title">{{ blog.judul }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ blog.penulis }}</h6>
+            <p class="card-text">{{ blog.isi }}</p>
+            <a href="#" class="card-link">Link</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

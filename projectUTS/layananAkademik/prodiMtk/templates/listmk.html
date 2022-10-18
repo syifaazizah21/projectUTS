@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="card">
+        <div class="card-img-top"></div>
+        <div class="card-body text-center">
+            <h5 class="card-title">List Mata Kuliah Jurusan Pendidikan Matematika</h5>
+            <p class="card-text">Daftar mata kuliah ini disusun berdasarkan kurikulum yang berlaku di jurusan pendidikan matematika untirta.</p>
+        </div>
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Kode MK</th>
+                        <th scope="col">Nama MK</th>
+                        <th scope="col">Nama Dosen</th>
+                        <th scope="col">W/P</th>
+                        <th scope="col">SKS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for mk in mk %}
+                    <tr>
+                        <td>{{ mk.kode_mk }}</td>
+                        <td>{{ mk.nama_mk }}</td>
+                        <td>{{ mk.nama_dosen }}</td>
+                        <td>{{ mk.wp }}</td>
+                        <td>{{ mk.sks }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

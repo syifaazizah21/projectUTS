@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'img/head-1.jpg' %}" class="carousel-img d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            <h5>Layanan Akademik Untirta</h5>
+            <p>Merupakan website yang berisi informasi seputar kegiatan perkuliahan di jurusan Pendidikan Matematika</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/head-2.jpg' %}" class="carousel-img d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            <h5>Apa saja yang ada di sini?</h5>
+            <p>Website ini berfokus pada memenuhi kebutuhan mahasiswa dalam menyelesaikan kegiatan perkuliahan serta memberikan referensi materi pembelajaran untuk mahasiswa.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'img/head-3.jpg' %}" class="carousel-img d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Siapa yang diperbolehkan mengakses halaman website ini?</h5>
+                <p>Website ini dibuat untuk memenuhi kebutuhan mahasiswa pendidikan matematika untirta, akan tetapi website ini tetap dapat diakses oleh seluruh kalangan masyarakat.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<main>
+    <div class="container">
+        <h2 class="text-center">Informasi Umum</h2>
+        <section>
+            <div class="card">
+                <div class="card-header bg-success">
+                    Daftar Nama Mata Kuliah
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-4">
+                        <p>Pada bagian ini terdapat daftar mata kuliah baik mata kuliah wajib maupun mata kuliah pilihan yang ditawarkan di jurusan pendidikan matematika untirta.</p>
+                    </blockquote>
+                    <a class="btn btn-primary" href="#">Lihat lebih lanjut!</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <div class="card-header bg-success">
+                    Catatan Mata Kuliah
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-4">
+                        <p>Pada bagian ini terdapat beberapa catatan mata kuliah yang dibuat oleh mahasiswa pada semester sebelumnya, berdasarkan mata kuliahnya.</p>
+                    </blockquote>
+                    <a class="btn btn-primary" href="#">Lihat lebih lanjut!</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <div class="card-header bg-success">
+                    Soal Latihan
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-4">
+                        <p>Pada bagian ini terdapat beberapa soal latihan dari semester yang lalu, untuk membantu mahasiswa dalam mempelajari materi melalui latihan soal.</p>
+                    </blockquote>
+                    <a class="btn btn-primary" href="#">Lihat lebih lanjut!</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <div class="card-header bg-success">
+                    Tanyakan Sesuatu!
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-4">
+                        <p>Pada menu ini anda dapat memberikan pertanyaan melalui form yang telah diberikan. Pertanyaan yang diajukan bersifat bebas sesuai dengan kendala akademik yang tengah di alami.</p>
+                    </blockquote>
+                    <a class="btn btn-primary" href="#">Lihat lebih lanjut!</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <div class="card-header bg-success">
+                    Blog Pembahasan
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-4">
+                        <p>Masuk ke sini untuk melihat apakah pertanyaan anda sudah di jawab atau belum. Semua hal terkait pembahasan pertanyaan akan dimuat pada menut ini.</p>
+                    </blockquote>
+                    <a class="btn btn-primary" href="#">Lihat lebih lanjut!</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}
